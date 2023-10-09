@@ -5,6 +5,7 @@
 :root {
   --primary-dark: #6b705c;
   --primary-light: #f0efeb;
+  --primary-text: #ffa000;
 }
 
 @layer utilities {

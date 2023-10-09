@@ -48,7 +48,7 @@ function App() {
     <div className="p-2 bg-primary-light dark:bg-primary-dark">
       <div className="p-0 flex justify-end items-end">
         
-        <button className={`text-${theme === 'dark' ? 'text-white' : 'text-black'} cursor-pointer p-6 border border-[var(--primary-light)] dark:border-[var(--primary-dark)] bg-amber-700 dark:bg-primary-dark`} onClick={handleThemeSwitch} >{getIcon()}</button>
+        <button className={`text-${theme === "light" ? 'white' : 'black'} cursor-pointer p-2 rounded-lg border border-slate-700 bg-[var(--primary-dark)] dark:bg-primary-light`} onClick={handleThemeSwitch} >{getIcon()}</button>
 
       </div>
       
