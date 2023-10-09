@@ -5,7 +5,8 @@
 :root {
   --primary-dark: #6b705c;
   --primary-light: #f0efeb;
-  --primary-text: #ffa000;
+  --primary-text: #be8014;
+  --secondary-text: #a8d5e2;
 }
 
 @layer utilities {
@@ -23,5 +24,9 @@
 
   .text-primary-light {
     color: var(--primary-light);
+  }
+
+  .bg-primary-text {
+    background-color: var(--primary-text);
   }
 }
