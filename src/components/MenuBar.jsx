@@ -26,7 +26,7 @@ function MenuBar() {
                 <span className='cursor-pointer'><Link to='/today'>Today</Link></span>
                 <span>Completed</span>
                 <span>Calender</span>
-                <span>Sticky Waill</span>
+                <span>Sticky Wall</span>
             </div>
 
             <div className='p-2 m-1 flex flex-col justify-center items-start'>
@@ -65,9 +65,7 @@ function MenuBar() {
         </div>
 
 
-        
-
-        <div className='dark:bg-primary-dark1 bg-secondary-text p-4 grid-flow-row rounded-xl'>
+        <div className='dark:bg-primary-dark1 bg-[var(--secondary-text1)] sm:p-4 grid-flow-row rounded-xl'>
             <Today />
         </div>
     </div>

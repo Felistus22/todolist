@@ -9,6 +9,7 @@
   --primary-text: #be8014;
   --primary-text1: #df6c02;
   --secondary-text: #a8d5e2;
+  --secondary-text1: #aec3b0;
 
 }
 
@@ -49,6 +50,9 @@
   }
   .grid-template-coll {
     grid-template-columns: 8vw auto;
+  }
+  .grid-template-colll {
+    grid-template-columns: 30vw 30vw;
   }
 }
 
