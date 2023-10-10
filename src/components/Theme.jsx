@@ -50,7 +50,7 @@ function Theme() {
   };
 
   return (
-    <div className="p-2 bg-primary-light dark:bg-primary-dark">
+    <div className="p-2 bg-primary-light dark:bg-primary-dark rounded-t-xl ">
       <div className="flex justify-between items-center">
         <div className="w-20">
             <Link to='./'>
@@ -58,7 +58,7 @@ function Theme() {
             </Link>
         </div>
         <div className="p-0 flex justify-end items-end">
-            <button className={`text-${theme === "light" ? 'white' : 'black'} cursor-pointer p-2 rounded-lg border border-slate-700 bg-[var(--primary-dark)] dark:bg-primary-light`} onClick={handleThemeSwitch} >{getIcon()}</button>
+            <button className={`text-${theme === "light" ? 'white' : 'black'} cursor-pointer p-2 rounded-lg border border-[var(--secondary-text)] dark:border-[var(--primary-text1)] bg-[var(--primary-dark)] dark:bg-primary-light text-[var(--primary-light)] dark:text-[var(--primary-text1)]`} onClick={handleThemeSwitch} >{getIcon()}</button>
         </div>
       </div>
 
