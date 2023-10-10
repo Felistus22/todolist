@@ -58,7 +58,7 @@ function Theme() {
             </Link>
         </div>
         <div className="p-0 flex justify-end items-end">
-            <button className={`text-${theme === "light" ? 'white' : 'black'} cursor-pointer p-2 rounded-lg border border-[var(--secondary-text)] dark:border-[var(--primary-text1)] bg-[var(--primary-dark)] dark:bg-primary-light text-[var(--primary-light)] dark:text-[var(--primary-text1)]`} onClick={handleThemeSwitch} >{getIcon()}</button>
+            <button className={`text-${theme === "light" ? 'white' : 'black'} cursor-pointer p-2 rounded-lg border border-[var(--secondary-text)] dark:border-[var(--primary-text1)] bg-[var(--primary-dark)] dark:bg-primary-light text-[var(--primary-light)] dark:text-primary-text`} onClick={handleThemeSwitch} >{getIcon()}</button>
         </div>
       </div>
 
