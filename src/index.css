@@ -24,6 +24,9 @@
   .text-primary-dark {
     color: var(--primary-dark);
   }
+  .text-primary-text {
+    color: var(--primary-text);
+  }
 
   .bg-primary-light {
     background-color: var(--primary-light);
@@ -42,6 +45,10 @@
   }
 
   .grid-template-col {
-    grid-template-columns: 20vw auto;
+    grid-template-columns: 14vw auto;
+  }
+  .grid-template-coll {
+    grid-template-columns: 8vw auto;
   }
 }
+
