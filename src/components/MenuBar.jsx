@@ -5,15 +5,19 @@ import {Link} from 'react-router-dom'
 import Today from './Today'
 
 function MenuBar() {
-
     const [nav, setNav] = useState(false);
+    const [today, setToday] = useState(false);
 
     const handleNav = () => {
         setNav(!nav);
     } 
 
+    const handleToday = () => {
+        setToday(true)
+    }
+
   return (
-    <div className='Menu dark:text-primary-light grid grid-flow-col grid-template-coll sm:grid-template-col h-full'>
+    <div className='Menu dark:text-primary-light grid grid-flow-col grid-template-coll sm:grid-template-col h-[87vh] bg-primary-light dark:bg-primary-dark'>
         <div className='p-1 hidden sm:block justify-center items-center'>
             <h1 className='m-1 p-1 text-[var(--primary-text)] dark:text-[var(--secondary-text)] text-xl'>MENU</h1>
             <div className='p-1 m-1'>
@@ -23,7 +27,7 @@ function MenuBar() {
             <div className='p-2 m-1 flex flex-col justify-center items-start'>
                 <p className='font-bold text-xl' >Tasks</p>
                 <span className='cursor-pointer'><Link to='/upcoming'>Upcoming</Link></span>
-                <span className='cursor-pointer'><Link to='/today'>Today</Link></span>
+                <span className='cursor-pointer'><Link to='/today' onClick={handleToday}>Today</Link></span>
                 <span>Completed</span>
                 <span>Calender</span>
                 <span>Sticky Wall</span>
@@ -44,7 +48,7 @@ function MenuBar() {
             </div>
         </div>
 
-        {/*humburgher icon */}
+        {/*humburgher icon grid grid-flow-col grid-template-coll sm:grid-template-col */}
       <div onClick={handleNav} className='sm:hidden z-10 mt-56 text-primary-text'>
         <MenuIcon fontSize='large' className='cursor-pointer'/>
       </div>
@@ -65,9 +69,17 @@ function MenuBar() {
         </div>
 
 
-        <div className='dark:bg-primary-dark1 bg-[var(--secondary-text1)] sm:p-4 grid-flow-row rounded-xl'>
+       {/* <div className='dark:bg-primary-dark1 bg-[var(--secondary-text1)] sm:p-4 grid-flow-row rounded-xl '>
+            <div>
+                <div className={today? 'border hidden' : 'border border-orange-500 block'}>
+                <Today />
+                </div>
+                {today && 
+                <div className={today? 'block border border-green-500' : 'border border-yellow-500 top-1 block'}><Today /></div>
+                }
+            </div>
             <Today />
-        </div>
+        </div>*/}
     </div>
   )
 }

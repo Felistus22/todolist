@@ -62,9 +62,9 @@ function Theme() {
         </div>
       </div>
 
-      <div className=" h-[87vh]">
+      {/*<div className=" h-[87vh]">
         <MenuBar />
-      </div>
+  </div>*/}
       
       
     </div>

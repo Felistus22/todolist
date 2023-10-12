@@ -2,7 +2,7 @@ import React from 'react'
 
 function Today() {
   return (
-    <div className='m-0 w-[100%]'>
+    <div className='m-1 bg-secondary-text1 dark:bg-primary-dark1 rounded-xl h-[85vh]'>
       <div className='p-2 w-[100%] grid grid-flow-row sm:justify-center rounded-xl'>
             <h1 className='p-2 text-2xl font-bold text-center dark:text-primary-text'>Tasks</h1>
             <div className='grid sm:grid-flow-col grid-flow-row w-[100%] sm:justify-center sm:grid-template-colll gap-0 sm:gap-4 '>
