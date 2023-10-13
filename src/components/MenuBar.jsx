@@ -17,7 +17,7 @@ function MenuBar() {
     }
 
   return (
-    <div className='Menu dark:text-primary-light grid grid-flow-col grid-template-coll sm:grid-template-col h-[87vh] bg-primary-light dark:bg-primary-dark'>
+    <div className='Menu dark:text-primary-light grid grid-flow-col grid-template-coll sm:grid-template-col h-[97vh] bg-primary-light dark:bg-primary-dark'>
         <div className='p-1 hidden sm:block justify-center items-center'>
             <h1 className='m-1 p-1 text-[var(--primary-text)] dark:text-[var(--secondary-text)] text-xl'>MENU</h1>
             <div className='p-1 m-1'>
@@ -53,7 +53,7 @@ function MenuBar() {
         <MenuIcon fontSize='large' className='cursor-pointer'/>
       </div>
         {/*mobile menu */}
-        <div className={nav ? 'overflow-y-hidden sm:hidden ease-in duration-300 absolute left-0 top-0 h-screen w-[80%] m-12 bg-black/90 px-4 py-7 flex flex-col justify-center items-center' : 'absolute hidden top-0 w-full h-screen left-{-100%} ease-in duration-500'}>
+        <div className={nav ? 'overflow-y-hidden sm:hidden ease-in duration-300 absolute left-0 top-0 h-[107vh] w-[80%] m-12 bg-black/90 px-4 py-7 flex flex-col justify-center items-center' : 'absolute hidden top-0 w-full h-screen left-{-100%} ease-in duration-500'}>
             <h1 className='m-1 p-1 text-[var(--primary-text)] dark:text-[var(--secondary-text)] text-3xl'>MENU</h1>
             
             <div className='p-2 m-1 flex flex-col justify-center items-start text-lg leading-10'>
