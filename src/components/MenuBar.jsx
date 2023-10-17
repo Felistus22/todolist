@@ -9,6 +9,7 @@ import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 //import {Link} from 'react-router-dom'
 import Upcoming from './Upcoming'
 import Today from './Today'
+import StickyWall from './StickyWall';
 
 function MenuBar({ onSelectComponent }) {
     const [nav, setNav] = useState(false);
@@ -34,7 +35,7 @@ function MenuBar({ onSelectComponent }) {
                 <button onClick={() => handleComponentSelect(<Today />)}><TodayIcon fontSize='large' className='text-primary-text p-1' />Today</button>
                 <span><FactCheckIcon fontSize='large' className='text-primary-text p-1'/>Completed</span>
                 {/*<span>Calender</span>*/}
-                <span><StickyNote2Icon fontSize='large' className='text-primary-text p-1'/>Sticky Wall</span>
+                <button onClick={() => handleComponentSelect(<StickyWall />)}><StickyNote2Icon fontSize='large' className='text-primary-text p-1 hidden '/>Sticky Wall</button>
             </div>
 
             {/*<div className='p-2 m-1 flex flex-col justify-center items-start'>

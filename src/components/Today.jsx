@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DeleteTask from './DeleteTask';
 import AddIcon from '@mui/icons-material/Add';
 
@@ -10,9 +10,18 @@ function Today() {
   const addTask = () => {
     if (newTask){
       setTasks([...tasks, newTask]);
-      setNewTask('');
+      const updatedTasks = [...tasks, newTask];
+      localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+      //setNewTask('');
+      setTasks(updatedTasks);
     }
   }
+  useEffect(() => {
+    const storedTasks = JSON.parse(localStorage.getItem('tasks'));
+    if (storedTasks) {
+      setTasks(storedTasks);
+    }
+  }, []);
 
   const deleteTask = (taskIndex) => {
     const updatedTasks = tasks.filter((_, index) => index !== taskIndex);
