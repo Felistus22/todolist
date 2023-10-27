@@ -6,14 +6,16 @@ function Today() {
 
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
+  const [editedTask, setEditedTask] = useState('');
+  const [isEditing, setIsEditing] = useState(false);
+  const [editingIndex, setEditingIndex] = useState(-1); // Initialize with -1 to indicate no task is being edited initially
 
   const addTask = () => {
     if (newTask){
-      setTasks([...tasks, newTask]);
       const updatedTasks = [...tasks, newTask];
-      localStorage.setItem("tasks", JSON.stringify(updatedTasks));
-      //setNewTask('');
       setTasks(updatedTasks);
+      localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+      setNewTask('');//clear the input field
     }
   }
   useEffect(() => {
@@ -22,6 +24,22 @@ function Today() {
       setTasks(storedTasks);
     }
   }, []);
+
+  const editTask = (taskIndex) => {
+    setEditedTask(tasks[taskIndex]);// Set the currently edited task
+    setIsEditing(true); // Set the editing flag
+  }
+
+  const updateTask = (taskIndex) => {
+    if (editedTask) {
+      const updatedTasks = [...tasks];
+      updatedTasks[taskIndex] = editedTask;
+      setTasks(updatedTasks);
+      localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+      setEditedTask(''); // Clear the edited task
+      setIsEditing(false); // Clear the editing flag
+    }
+  }
 
   const deleteTask = (taskIndex) => {
     const updatedTasks = tasks.filter((_, index) => index !== taskIndex);
@@ -39,7 +57,15 @@ function Today() {
                       
                       <div className="task-container w-[90%]">
                         {tasks.map((task, index) => (
-                          <DeleteTask key={index} task={task} onDelete={() => deleteTask(index)} />
+                          <div>
+                            <DeleteTask 
+                             key={index}
+                             task={task}
+                             onDelete={() => deleteTask(index)} 
+                             onEdit={()=> editTask(index)} 
+                             edittedTask = {editedTask} 
+                             isEditing = {isEditing}  />
+                          </div>
                         ))}
                       </div>
                       <div className='flex flex-row w-[90%]'>
