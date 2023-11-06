@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+//import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import UpcomingIcon from '@mui/icons-material/Upcoming';
 import TodayIcon from '@mui/icons-material/Today';
 import FactCheckIcon from '@mui/icons-material/FactCheck';
@@ -13,12 +13,12 @@ import StickyWall from './StickyWall';
 
 function MenuBar({ onSelectComponent }) {
     const [nav, setNav] = useState(false);
-    const [isX, setIsX] = useState(false);
+    const [isXIcon, setIsXIcon] = useState(false);
     {/*const [today, setToday] = useState(false);*/}
 
     const handleNav = () => {
         setNav(!nav);
-        setIsX(!isX);
+        setIsXIcon(!isXIcon);
     } 
 
     const handleComponentSelect = (component) => {
@@ -55,7 +55,7 @@ function MenuBar({ onSelectComponent }) {
 
         {/*humburgher icon */}
       <div onClick={handleNav} className='sm:hidden z-10 mt-56 text-primary-text'>
-        {isX? (
+        {isXIcon? (
         <CloseIcon fontSize='large' className='cursor-pointer' />):
         (
         <MenuIcon fontSize='large' className='cursor-pointer' />)}

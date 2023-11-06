@@ -3,7 +3,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import SaveIcon from '@mui/icons-material/Save';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 
-function DeleteTask({ task, onDelete, onEdit, edittedTask, isEditing }) {
+function DeleteTask({ task, onDelete, onEdit, isEditing }) {
 
   const [isTaskEditing, setIsTaskEditing] = useState(false);
   const [editedTask, setEditedTask] = useState(task);
